@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الجوكر السوري 🃏 | تحالفات الجنرال | صراع الأمم</title>
+
+<meta name="description"
+content="الجوكر السوري - مجتمع عربي للاعبي الجنرال وصراع الأمم Conflict of Nations: World War 3. تحالفات، لاعبين، دردشة، منافسات ومجتمعات Telegram وWhatsApp.">
+
+<meta name="keywords"
+content="الجوكر السوري, صراع الأمم, الجنرال, Conflict of Nations, World War 3, تحالفات الجنرال, لاعبين عرب, لاعبين سوريين, Telegram, WhatsApp">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="الجوكر السوري 🃏 | تحالفات الجنرال">
+<meta property="og:description"
+content="مجتمع عربي للاعبي الجنرال وصراع الأمم - Conflict of Nations: World War 3">
+<meta property="og:type" content="website">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Tahoma,sans-serif;
+    background:#070b11;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 15% 10%,rgba(34,158,217,.12),transparent 25%),
+        radial-gradient(circle at 85% 25%,rgba(0,255,170,.06),transparent 25%),
+        radial-gradient(circle at 50% 90%,rgba(100,80,255,.05),transparent 30%);
+    z-index:-1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:999;
+    backdrop-filter:blur(15px);
+    background:rgba(7,11,17,.82);
+    border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.nav-container{
+    max-width:1150px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:#61dafb;
+}
+
+.nav-links{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:#b8c5d2;
+    text-decoration:none;
+    padding:9px 13px;
+    border-radius:9px;
+    transition:.2s;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:#fff;
+    background:rgba(255,255,255,.07);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:700px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    padding:80px 20px;
+}
+
+.hero-glow{
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:rgba(34,158,217,.08);
+    filter:blur(70px);
+    top:-250px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid rgba(97,218,251,.25);
+    background:rgba(97,218,251,.06);
+    border-radius:50px;
+    color:#61dafb;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.brand{
+    font-size:clamp(48px,10vw,90px);
+    font-weight:1000;
+    letter-spacing:-4px;
+    background:linear-gradient(90deg,#fff,#61dafb,#fff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:0 0 40px rgba(97,218,251,.2);
+}
+
+.hero-title{
+    font-size:clamp(28px,5vw,48px);
+    margin-top:18px;
+}
+
+.hero-description{
+    max-width:720px;
+    margin:20px auto;
+    color:#aebdca;
+    font-size:18px;
+    line-height:2;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:13px;
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    padding:15px 25px;
+    border-radius:13px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    transition:.25s;
+    border:1px solid transparent;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.telegram{
+    background:linear-gradient(135deg,#229ed9,#1379ad);
+    box-shadow:0 10px 30px rgba(34,158,217,.2);
+}
+
+.whatsapp{
+    background:linear-gradient(135deg,#20c76a,#119b50);
+    box-shadow:0 10px 30px rgba(32,199,106,.18);
+}
+
+.secondary{
+    background:rgba(255,255,255,.05);
+    border-color:rgba(255,255,255,.09);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    max-width:1050px;
+    margin:-45px auto 0;
+    padding:0 20px;
+    position:relative;
+    z-index:5;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.stat{
+    background:rgba(18,27,38,.9);
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:17px;
+    padding:25px 15px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+}
+
+.stat-number{
+    font-size:31px;
+    font-weight:900;
+    color:#61dafb;
+}
+
+.stat-label{
+    margin-top:7px;
+    color:#899aaa;
+    font-size:14px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section{
+    margin-bottom:80px;
+    scroll-margin-top:90px;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-heading h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.section-heading p{
+    color:#8493a3;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.card{
+    background:linear-gradient(
+        145deg,
+        rgba(24,35,48,.9),
+        rgba(12,18,26,.95)
+    );
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:20px;
+    padding:30px 23px;
+    transition:.25s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:rgba(97,218,251,.07);
+    border-radius:50%;
+    top:-60px;
+    right:-60px;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(97,218,251,.22);
+}
+
+.card-icon{
+    font-size:40px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-size:21px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#9dacbb;
+    line-height:1.8;
+}
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.community-box{
+    padding:35px;
+    border-radius:22px;
+    border:1px solid rgba(255,255,255,.07);
+    background:#111a24;
+}
+
+.community-box h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.community-box p{
+    color:#9dacbb;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.community-link{
+    display:block;
+    padding:13px;
+    border-radius:11px;
+    background:rgba(255,255,255,.05);
+    color:#61dafb;
+    text-decoration:none;
+    direction:ltr;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+/* =========================
+   ANNOUNCEMENT
+========================= */
+
+.announcement{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,193,7,.08),
+            rgba(18,27,38,.95)
+        );
+    border:1px solid rgba(255,193,7,.14);
+    border-radius:22px;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.announcement-icon{
+    font-size:45px;
+}
+
+.announcement-text h3{
+    margin-bottom:8px;
+}
+
+.announcement-text p{
+    color:#9dacbb;
+    line-height:1.7;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    background:#111a24;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:14px;
+    margin-bottom:12px;
+    overflow:hidden;
+}
+
+summary{
+    cursor:pointer;
+    padding:20px;
+    font-weight:bold;
+    list-style:none;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+details p{
+    padding:0 20px 20px;
+    color:#9dacbb;
+    line-height:1.8;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.tags{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    padding:10px 16px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:50px;
+    color:#aebdca;
+    font-size:14px;
+}
+
+/* =========================
+   SHARE
+========================= */
+
+.share{
+    text-align:center;
+    padding:40px 20px;
+    background:#101923;
+    border-radius:22px;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.share p{
+    color:#899aaa;
+    margin:10px 0 22px;
+}
+
+.copy-btn{
+    border:0;
+    color:#fff;
+    background:#263544;
+    padding:13px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid rgba(255,255,255,.07);
+    padding:45px 20px;
+    text-align:center;
+    color:#718191;
+    line-height:2;
+}
+
+.footer-brand{
+    color:#61dafb;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+#topBtn{
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    width:45px;
+    height:45px;
+    border:0;
+    border-radius:50%;
+    background:#229ed9;
+    color:#fff;
+    cursor:pointer;
+    display:none;
+    z-index:1000;
+    font-size:20px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .community{
+        grid-template-columns:1fr;
+    }
+
+    .announcement{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero{
+        min-height:650px;
+        padding:60px 15px;
+    }
+
+    .brand{
+        font-size:51px;
+    }
+
+    .hero-title{
+        font-size:27px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    main{
+        padding:60px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">
+🃏 <span>الجوكر السوري</span>
+</div>
+
+<div class="nav-links">
+<a href="#about">عن المجتمع</a>
+<a href="#communities">المجموعات</a>
+<a href="#features">المميزات</a>
+<a href="#faq">الأسئلة</a>
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+<div class="hero-glow"></div>
+
+<div class="hero-content">
+
+<div class="badge">
+🇸🇾 مجتمع عربي للاعبي الجنرال
+</div>
+
+<h1 class="brand">
+🃏 الجوكر السوري
+</h1>
+
+<h2 class="hero-title">
+تحالفات الجنرال | صراع الأمم
+</h2>
+
+<p class="hero-description">
+
+المجتمع العربي للاعبي
+<strong>الجنرال | صراع الأمم</strong>
+
+<br>
+
+Conflict of Nations: World War 3
+
+<br>
+
+تحالفات • منافسات • دردشة • استراتيجيات
+
+</p>
+
+
+<div class="buttons">
+
+<a class="btn telegram"
+href="https://t.me/GeneralWW3Arab"
+target="_blank"
+rel="noopener">
+
+📱 Telegram
+
+</a>
+
+<a class="btn whatsapp"
+href="https://chat.whatsapp.com/L3HRQo78gLXA5XvgcWbbPA?s=cl&p=a&ilr=0"
+target="_blank"
+rel="noopener">
+
+🟢 WhatsApp
+
+</a>
+
+<a class="btn secondary"
+href="#about">
+
+⬇️ اكتشف المجتمع
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+<div class="stats-grid">
+
+<div class="stat">
+<div class="stat-number">🎮</div>
+<div class="stat-label">مجتمع ألعاب</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">🤝</div>
+<div class="stat-label">تحالفات</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">🌍</div>
+<div class="stat-label">لاعبون عرب</div>
+</div>
+
+<div class="stat">
+<div class="stat-number">⚔️</div>
+<div class="stat-label">منافسات</div>
+</div>
+
+</div>
+
+</div>
+
+
+<main>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+<div class="section-heading">
+
+<h2>🃏 عن الجوكر السوري</h2>
+
+<p>
+مجتمع يجمع لاعبي الجنرال وصراع الأمم
+</p>
+
+</div>
+
+
+<div class="community-box">
+
+<h3>
+🇸🇾 مجتمع اللاعبين العرب
+</h3>
+
+<p>
+
+<strong>الجوكر السوري</strong>
+هو مجتمع عربي مخصص للاعبي
+<strong>الجنرال | صراع الأمم</strong>.
+
+هدف المجتمع هو جمع اللاعبين في مكان واحد
+للتعارف، تشكيل التحالفات، البحث عن أعضاء،
+تبادل الخبرات والاستراتيجيات وتنظيم المنافسات.
+
+</p>
+
+<p>
+
+سواء كنت لاعبًا جديدًا أو لديك خبرة طويلة،
+يمكنك الانضمام والتعرف على لاعبين آخرين.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="section" id="features">
+
+<div class="section-heading">
+
+<h2>⚡ مميزات المجتمع</h2>
+
+<p>
+كل ما يحتاجه لاعب صراع الأمم في مكان واحد
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">
+🤝
+</div>
+
+<h3>
+البحث عن التحالفات
+</h3>
+
+<p>
+تواصل مع اللاعبين وابحث عن أعضاء
+لتشكيل تحالفات وفِرق جديدة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+⚔️
+</div>
+
+<h3>
+المنافسات
+</h3>
+
+<p>
+شارك في المباريات والتحديات
+وتنافس مع اللاعبين والتحالفات.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+💬
+</div>
+
+<h3>
+الدردشة
+</h3>
+
+<p>
+ناقش اللعبة والخطط والاستراتيجيات
+مع مجتمع اللاعبين.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🧠
+</div>
+
+<h3>
+الاستراتيجيات
+</h3>
+
+<p>
+شارك أفكارك وخططك وتعلم أساليب
+جديدة من اللاعبين.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+📢
+</div>
+
+<h3>
+الإعلانات
+</h3>
+
+<p>
+تابع أخبار المجتمع والمباريات
+والفعاليات الجديدة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+🌍
+</div>
+
+<h3>
+مجتمع عربي
+</h3>
+
+<p>
+مكان يجمع اللاعبين العرب
+من مختلف الدول.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     COMMUNITIES
+========================= -->
+
+<section class="section" id="communities">
+
+<div class="section-heading">
+
+<h2>📱 مجتمعاتنا</h2>
+
+<p>
+اختر المنصة المناسبة لك
+</p>
+
+</div>
+
+
+<div class="community">
+
+
+<div class="community-box">
+
+<h3>
+📱 Telegram
+</h3>
+
+<p>
+مجموعة الدردشة والتحالفات
+الخاصة بمجتمع الجوكر السوري.
+</p>
+
+<div class="community-link">
+t.me/GeneralWW3Arab
+</div>
+
+<a class="btn telegram"
+href="https://t.me/GeneralWW3Arab"
+target="_blank"
+rel="noopener">
+
+🚀 دخول Telegram
+
+</a>
+
+</div>
+
+
+<div class="community-box">
+
+<h3>
+🟢 WhatsApp
+</h3>
+
+<p>
+انضم إلى مجموعة WhatsApp
+للتواصل مع اللاعبين ومتابعة المجتمع.
+</p>
+
+<div class="community-link">
+WhatsApp Community
+</div>
+
+<a class="btn whatsapp"
+href="https://chat.whatsapp.com/L3HRQo78gLXA5XvgcWbbPA?s=cl&p=a&ilr=0"
+target="_blank"
+rel="noopener">
+
+🚀 دخول WhatsApp
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ANNOUNCEMENT
+========================= -->
+
+<section class="section">
+
+<div class="announcement">
+
+<div class="announcement-icon">
+📢
+</div>
+
+<div class="announcement-text">
+
+<h3>
+إعلان المجتمع
+</h3>
+
+<p>
+
+انضم إلى إحدى مجموعات المجتمع حتى تبقى
+على اطلاع بالمنافسات والتحالفات والنقاشات
+الخاصة بلعبة الجنرال وصراع الأمم.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section" id="faq">
+
+<div class="section-heading">
+
+<h2>❓ الأسئلة الشائعة</h2>
+
+<p>
+أجوبة سريعة عن المجتمع
+</p>
+
+</div>
+
+
+<div class="faq">
+
+
+<details>
+
+<summary>
+🎮 ما هي لعبة صراع الأمم؟
+</summary>
+
+<p>
+Conflict of Nations: World War 3
+هي لعبة استراتيجية حربية تعتمد على إدارة الدولة
+والاقتصاد والجيش والتحالفات.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+🤝 هل المجموعة خاصة بالتحالفات؟
+</summary>
+
+<p>
+المجموعة مخصصة للدردشة والتواصل بين اللاعبين،
+ومن ضمنها البحث عن لاعبين وتشكيل التحالفات.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+🌍 هل يمكن للاعبين العرب الانضمام؟
+</summary>
+
+<p>
+نعم، المجتمع مخصص للاعبين العرب
+من مختلف الدول.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+📱 هل يوجد Telegram وWhatsApp؟
+</summary>
+
+<p>
+نعم، يوجد رابط مباشر لكل من Telegram
+وWhatsApp في قسم المجتمعات.
+</p>
+
+</details>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SEARCH TAGS
+========================= -->
+
+<section class="section">
+
+<div class="section-heading">
+
+<h2>🔎 كلمات البحث</h2>
+
+<p>
+المواضيع المرتبطة بالمجتمع
+</p>
+
+</div>
+
+
+<div class="tags">
+
+<span class="tag">الجوكر السوري</span>
+<span class="tag">صراع الأمم</span>
+<span class="tag">الجنرال</span>
+<span class="tag">Conflict of Nations</span>
+<span class="tag">World War 3</span>
+<span class="tag">تحالفات الجنرال</span>
+<span class="tag">تحالفات صراع الأمم</span>
+<span class="tag">لاعبين عرب</span>
+<span class="tag">لاعبين سوريين</span>
+<span class="tag">Telegram</span>
+<span class="tag">WhatsApp</span>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SHARE
+========================= -->
+
+<section class="section">
+
+<div class="share">
+
+<h2>
+🔗 شارك المجتمع
+</h2>
+
+<p>
+ساعد لاعبين آخرين على الوصول إلى مجتمع الجوكر السوري
+</p>
+
+<button class="copy-btn" onclick="copyLink()">
+📋 نسخ رابط الموقع
+</button>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="footer-brand">
+🃏 الجوكر السوري
+</div>
+
+<div>
+مجتمع لاعبي الجنرال | صراع الأمم
+</div>
+
+<div>
+Conflict of Nations: World War 3
+</div>
+
+<div>
+© 2026 GeneralWW3Arab
+</div>
+
+</footer>
+
+
+<!-- TOP BUTTON -->
+
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</button>
+
+
+<script>
+
+/* =========================
+   COPY LINK
+========================= */
+
+function copyLink(){
+
+    navigator.clipboard.writeText(window.location.href)
+    .then(function(){
+
+        alert("✅ تم نسخ رابط الموقع");
+
+    })
+    .catch(function(){
+
+        alert("انسخ الرابط من شريط المتصفح");
+
+    });
+
+}
+
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+window.addEventListener("scroll",function(){
+
+    const btn=document.getElementById("topBtn");
+
+    if(window.scrollY>400){
+
+        btn.style.display="block";
+
+    }else{
+
+        btn.style.display="none";
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

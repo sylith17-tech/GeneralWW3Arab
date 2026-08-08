@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sylith17-tech.github.io/GeneralWW3Arab/sitemap.xml
