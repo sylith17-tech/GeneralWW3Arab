@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول - General WW3 Arab</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Arial,sans-serif;
+      background:#0b1220;
+      color:#fff;
+    }
+    .login-box{
+      width:min(420px,92%);
+      padding:32px;
+      background:#111c2e;
+      border:1px solid #263752;
+      border-radius:16px;
+      box-shadow:0 15px 50px #0008;
+    }
+    h1{
+      margin:0 0 8px;
+      text-align:center;
+    }
+    .subtitle{
+      text-align:center;
+      color:#9eabc0;
+      margin-bottom:28px;
+    }
+    label{
+      display:block;
+      margin:14px 0 7px;
+    }
+    input,select,button{
+      width:100%;
+      padding:13px;
+      border-radius:9px;
+      border:1px solid #334766;
+      background:#0b1424;
+      color:#fff;
+      font-size:15px;
+    }
+    button{
+      margin-top:22px;
+      cursor:pointer;
+      background:#1769aa;
+      border:0;
+      font-weight:bold;
+    }
+    button:hover{background:#2082ce}
+    .back{
+      display:block;
+      text-align:center;
+      margin-top:20px;
+      color:#8fc7ff;
+      text-decoration:none;
+    }
+    #message{
+      display:none;
+      margin-top:18px;
+      padding:12px;
+      border-radius:8px;
+      background:#3a2d12;
+      color:#ffd98a;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="login-box">
+    <h1>تسجيل الدخول</h1>
+    <div class="subtitle">General WW3 Arab</div>
+
+    <form id="loginForm">
+      <label for="role">نوع الحساب</label>
+      <select id="role" required>
+        <option value="">اختر نوع الحساب</option>
+        <option value="admin">الإدارة</option>
+        <option value="staff">الموظفين</option>
+      </select>
+
+      <label for="username">اسم المستخدم</label>
+      <input id="username" type="text" autocomplete="username" required>
+
+      <label for="password">كلمة المرور</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+
+      <button type="submit">دخول</button>
+    </form>
+
+    <div id="message">
+      هذه واجهة تجريبية فقط — لم تتم إضافة نظام مصادقة حقيقي بعد.
+    </div>
+
+    <a class="back" href="/GeneralWW3Arab/">العودة للرئيسية</a>
+  </main>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("message").style.display = "block";
+    });
+  </script>
+</body>
+</html>

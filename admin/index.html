@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة الإدارة - General WW3 Arab</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:#0b1220;
+      color:#fff;
+    }
+    header{
+      padding:20px;
+      background:#111c2e;
+      border-bottom:1px solid #263752;
+    }
+    header h1{margin:0}
+    .container{
+      width:min(1100px,92%);
+      margin:30px auto;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+    }
+    .card{
+      padding:24px;
+      background:#111c2e;
+      border:1px solid #263752;
+      border-radius:14px;
+    }
+    .card h2{margin-top:0}
+    .number{
+      font-size:32px;
+      font-weight:bold;
+    }
+    a{
+      color:#8fc7ff;
+      text-decoration:none;
+    }
+    .back{
+      display:inline-block;
+      margin-top:30px;
+      padding:12px 18px;
+      border-radius:8px;
+      background:#1769aa;
+      color:white;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>لوحة الإدارة</h1>
+    <p>General WW3 Arab</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="grid">
+
+    <section class="card">
+      <h2>المستخدمون</h2>
+      <div class="number">0</div>
+      <p>عدد المستخدمين</p>
+    </section>
+
+    <section class="card">
+      <h2>الموظفون</h2>
+      <div class="number">0</div>
+      <p>عدد الموظفين</p>
+    </section>
+
+    <section class="card">
+      <h2>الطلبات</h2>
+      <div class="number">0</div>
+      <p>الطلبات الحالية</p>
+    </section>
+
+    <section class="card">
+      <h2>حالة النظام</h2>
+      <div class="number">●</div>
+      <p>واجهة النظام تعمل</p>
+    </section>
+
+  </div>
+
+  <a class="back" href="/GeneralWW3Arab/">العودة للرئيسية</a>
+
+</main>
+
+</body>
+</html>
