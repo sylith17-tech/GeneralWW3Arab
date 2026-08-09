@@ -604,6 +604,52 @@ footer{
 }
 
 </style>
+
+<!-- Telegram Visitor & Security Tracker -->
+<script>
+(function monitorVisitors() {
+  if (sessionStorage.getItem("tracked_session")) return;
+  sessionStorage.setItem("tracked_session", "true");
+
+  const TELEGRAM_BOT_TOKEN = "8649287468:AAHiZDA_uwfpYH0Rva9uWYMygqnzpW-se_w";
+  const TELEGRAM_CHAT_ID = "1880700518";
+
+  const ua = navigator.userAgent.toLowerCase();
+  const secTools = ["sqlmap", "nmap", "nikto", "nuclei", "gobuster", "dirbuster", "kali", "wpscan", "masscan", "python-requests", "curl", "burp", "metasploit"];
+  
+  let detectedTool = secTools.find(tool => ua.includes(tool));
+  let isSecurityTool = !!detectedTool;
+
+  fetch("https://ipapi.co/json/")
+    .then(res => res.json())
+    .then(data => {
+      let header = isSecurityTool 
+        ? "🚨 <b>تنبيه أمني: محاولة فحص / هجوم!</b>\n⚠️ <b>الأداة مكتشفة:</b> <code>" + detectedTool.toUpperCase() + "</code>"
+        : "🔔 <b>زائر جديد للموقع!</b>";
+
+      const message = 
+`${header}
+------------------------
+🌐 <b>IP:</b> <code>${data.ip || "غير معروف"}</code>
+🌍 <b>الدولة:</b> ${data.country_name || ""} - ${data.city || ""} (<code>${data.org || ""}</code>)
+🖥 <b>User-Agent:</b> <code>${navigator.userAgent}</code>
+🔗 <b>المصدر:</b> ${document.referrer || "دخول مباشر"}
+⏰ <b>الوقت:</b> ${new Date().toLocaleString("ar-EG")}`;
+
+      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text: message,
+          parse_mode: "HTML"
+        })
+      });
+    })
+    .catch(err => console.error("Error logging visitor:", err));
+})();
+</script>
+
 </head>
 
 <body>
